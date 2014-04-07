@@ -1,0 +1,61 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require font-awesome
+ *= require_tree .
+ */
+
+@import "bootstrap";
+
+tr.error{
+  background:red;
+}
+
+input.hasDatepicker[readonly] {
+  background: #FFFFFF;
+  cursor: pointer;
+}
+
+.main.container-fluid {
+  margin: 1em auto;
+}
+
+.table {
+  max-width: none;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  .main.container-fluid {
+    width:900px;
+  }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  .main.container-fluid {
+    width: 800px;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  .main.container-fluid {
+    width: 700px;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .main.container-fluid {
+    width: 400px;
+  }
+}

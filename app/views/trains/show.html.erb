@@ -1,0 +1,39 @@
+
+<div id="notice" class="row"><%= notice %></div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="row">
+      <div class="col-md-12"> <h1>Train Details</h1></div>
+    </div>
+  </div>
+  <div class="panel-body">
+
+
+    <div class="row">
+      <div class="col-md-2"><strong>Train line:</strong></div>
+      <div class="col-md-10"><%= @train.train_line %></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2"><strong>Route:</strong></div>
+      <div class="col-md-10"><%= @train.route_name %></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2"><strong>Run number:</strong></div>
+      <div class="col-md-10"><%= @train.run_number %></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2"><strong>Operator:</strong></div>
+      <div class-"col-md-10"><%= @train.operator_id %></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <%= link_to 'Edit', edit_train_path(@train), class: "btn btn-default" %> |
+          <%= link_to 'Back', trains_path, class: "btn btn-default" %>
+      </div>
+    </div>
+  </div>
+</div>

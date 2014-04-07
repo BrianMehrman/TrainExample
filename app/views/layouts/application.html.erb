@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TrainExercise</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container">
+  <% flash[:error].each do |error| %>
+    <div class="row alert alert-warning alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <span><%= error %></span>
+    </div>
+  <% end if flash[:error].class == Array -%>
+</div>
+<div class="container">
+  <%= yield %>
+</div>
+</body>
+</html>
