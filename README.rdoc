@@ -26,6 +26,7 @@ rails s
 You can run the tests using the following command
 
 
-`rspec --format nested`
-
+```
+rspec --format nested
+```
 
